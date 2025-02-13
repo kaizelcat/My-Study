@@ -1,0 +1,52 @@
+ol{
+    border-right:1px solid gray;
+    width:100px;
+    margin:0;
+    padding:20px;
+}
+h1{
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin:0;
+    padding:20px;
+}
+a {
+    color:red;
+    text-decoration: none;
+}   
+b {
+    color:blue;
+}
+h6 {
+    font-size:60px;
+    text-align: center;
+}
+#saw {
+    color:purple;
+}
+.active{
+    color: red;
+}
+#grid{
+    display:grid;
+    grid-template-columns:500px 1fr;
+}
+#article{
+    padding-left:25px;
+}
+#grid ol{
+    padding-left:33px;
+    /*ol 중에 조상이 #grid 태그를 가진진 ol만 이걸 쓴다.*/
+}
+
+@media(max-width:800px){
+    #grid{
+    display:block;
+    }
+    ol{
+        border-right:none;
+    }
+    h1{
+        border-bottom:none;
+    }
+}

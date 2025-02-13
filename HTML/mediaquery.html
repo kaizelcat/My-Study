@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> CSS mediaqurey </title>
+        <style>
+            div{
+                border:5px solid green;
+                font-size: 40px;
+            }
+            
+            @media(min-width:800px){
+                div{
+                    display:none;
+                    /* 800 px 넘으면 사라진다. 반대는 max로*/
+                }
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div>
+            Responsive
+        </div>
+    </body>
+</html>
