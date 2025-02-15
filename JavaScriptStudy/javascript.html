@@ -16,6 +16,35 @@
                 color:burlywood;
             }
         </style>
+        <script>
+            function nightDayHandler(self){
+                var target = document.querySelector('body');
+                if(self.value === 'night'){
+                    target.style.backgroundColor ='black';
+                    target.style.color ='white';
+                    self.value = 'day';
+                    var i=0;
+                    var alist = document.querySelectorAll('a');
+                    while(i<alist.length){
+                     alist[i].style.color = 'red';
+                     i=i+1;
+                }
+                
+                } else {
+                    target.style.backgroundColor ='white';
+                    target.style.color ='black';
+                    self.value = 'night';
+                    var i=0;
+                    var alist = document.querySelectorAll('a');
+                    while(i<alist.length){
+                        alist[i].style.color = 'blue';
+                        i=i+1;
+                    }
+                
+                }
+
+            }
+        </script>
     </head>
 
     <body>
@@ -52,19 +81,8 @@
         </p>
 
         <input type="button" value="night" onclick="
-        var target = document.querySelector('body');
-        if(this.value === 'night'){
-            target.style.backgroundColor ='black';
-            target.style.color ='white';
-            this.value = 'day';
-            
-        } else {
-            target.style.backgroundColor ='white';
-            target.style.color ='black';
-            this.value = 'night';
-            
-        }
-    ">
+            nightDayHandler(this)
+        ">
         <!-- 
         위는 인덱스 태그이다.
         document.querySelector('#night_day2') 를 this로 대체함.
@@ -98,3 +116,53 @@
         -->
     </body>
 </html>
+<!-- 
+검사 후 콘솔에서 
+document.querySelector('a')를 입력하게 된다면?
+a태그 전체가 아닌 관련된 요소증 첫 번째째 하나만 가지고 오는 특성이 있음.
+
+document.querySelectorAll 이라는게 있다. 검색해서 뭔지 보고 어떻게 쓰는 지 확인.
+Nodelist 로 a 4개가 나왔다.
+여기서 var alist = document.querySelectorAll('a') 하면 줄바꿈이 되네요?
+console.log(); 하면 괄호 안에 있는게 출력된다. alist[0]을 넣으면?
+
+var alist = document.querySelectorAll('a');
+var i = 0;
+while(i<alist.length){
+    console.log(alist[i]);
+    i=i+1;
+}
+이렇게 하니까 목록 4개 다 나오네!
+
+-->
+
+<!--
+function nightDayHandler(self){
+                var target = document.querySelector('body');
+                if(self.value === 'night'){
+                    target.style.backgroundColor ='black';
+                    target.style.color ='white';
+                    self.value = 'day';
+                    var i=0;
+                    var alist = document.querySelectorAll('a');
+                    while(i<alist.length){
+                     alist[i].style.color = 'red';
+                     i=i+1;
+                }
+                
+                } else {
+                    target.style.backgroundColor ='white';
+                    target.style.color ='black';
+                    self.value = 'night';
+                    var i=0;
+                    var alist = document.querySelectorAll('a');
+                    while(i<alist.length){
+                        alist[i].style.color = 'blue';
+                        i=i+1;
+                    }
+                
+                }
+
+            }
+28 이전까지 만든 함수
+-->

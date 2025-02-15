@@ -7,13 +7,23 @@
 
     <body>
         <h1>Loop & Array</h1>
+        <script>
+            var coworkes = ['egoing','leezche','test1','soccer'];
+        </script>
         <h2>Co workers</h2>
         <ul>
-            <li>egoing</li>
-            <li>leezche</li>
-            <li>test1</li>
-            <li>soccer</li>
+            <script>
+                var i=0;
+                while(i<coworkes.length){
+                    document.write('<li>'+coworkes[i] +'</li>');
+                    i=i+1;
+                }
+            </script>           
         </ul>
-
     </body>
 </html>
+
+<!-- 
+값이 없다면 undefined 가 나온다! 
+document.write('<li><a href="http://a.com/'+coworkes[i]+'">+coworkes[i] +'</li>');
+-->
