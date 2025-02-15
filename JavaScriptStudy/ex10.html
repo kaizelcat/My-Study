@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Object</title>
+    </head>
+
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var corworkers = { // 배열은 [] 대괄호 , 객체는 {} 중괄호
+                "tester1":"kaizel","tester2":"kaizel2"
+            };
+            document.write("tester : "+ corworkers.tester1+"<br>");
+            document.write("tester : "+ corworkers.tester2+"<br>");
+            corworkers.tester3 = "kaizel3";
+            document.write("tester : "+ corworkers.tester3+"<br>");
+            corworkers["tester4"]="kaizel4";
+            document.write("tester : " + corworkers.tester4+"<br>");
+        </script>
+        <h2>Iterate</h2>
+        <script>
+            for(var key in corworkers){
+                document.write(key + '<br>');
+            }
+
+            for(var key in corworkers){
+                document.write(corworkers[key] + '<br>');
+            }
+            
+        </script>
+
+
+    </body>
+</html>

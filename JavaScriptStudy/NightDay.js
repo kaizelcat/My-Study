@@ -1,26 +1,30 @@
+function LinksSetColor(color){
+    var i=0;
+    var alist = document.querySelectorAll('a');
+    while(i<alist.length){
+    alist[i].style.color = color;
+    i=i+1;
+    }
+}
+function BodySetColor(color){
+    document.querySelector('body').style.color = color;
+}
+function BodySetBackGroundColor(color){
+    document.querySelector('body').style.backgroundColor = color;
+}
 function nightDayHandler(self){
     var target = document.querySelector('body');
     if(self.value === 'night'){
-        target.style.backgroundColor ='black';
-        target.style.color ='white';
+        BodySetBackGroundColor('black');
+        BodySetColor('white');
         self.value = 'day';
-        var i=0;
-        var alist = document.querySelectorAll('a');
-        while(i<alist.length){
-         alist[i].style.color = 'red';
-         i=i+1;
-    }
-    
-    } else {
-        target.style.backgroundColor ='white';
-        target.style.color ='black';
+        LinksSetColor('red');
+    } 
+    else {
+        BodySetBackGroundColor('white');
+        BodySetColor('black');
         self.value = 'night';
-        var i=0;
-        var alist = document.querySelectorAll('a');
-        while(i<alist.length){
-            alist[i].style.color = 'blue';
-            i=i+1;
-        }
+        LinksSetColor('blue')
     
     }
 }
