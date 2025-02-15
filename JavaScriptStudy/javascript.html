@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>자바 스크립트 공부장</title>
+        <style>
+            .js{
+                font-weight:bold;
+                background-color:brown;
+                color:blue;
+            }
+            #first{
+                color:green;
+            }
+            span{
+                color:burlywood;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <h1><a href="index.html">WEB</a></h1>
+        <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if(this.value === 'night'){
+            target.style.backgroundColor ='black';
+            target.style.color ='white';
+            this.value = 'day';
+            
+        } else {
+            target.style.backgroundColor ='white';
+            target.style.color ='black';
+            this.value = 'night';
+            
+        }
+    ">
+        <h2 style="background-color:red;"color: aqua;">JavaScript</h2>
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="CSS1.html">CSS</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+        </ol>
+<!-- style="font-weight:bold;"를 class="js"로 바꿈 .을 찍어줘야 클래스로 #은 ID-->
+        <p>
+            <span id="first" class="js">JavaScript</span>를 공부하기 위한 공부장입니다. 이 공부장은 한글로 작성하여 조금 보기 불편한 요소가 있을지도 모릅니다.
+            <div><span>div</span>는 전체를 써서 줄 바꿈이 되지만 <span>span</span>은 줄 바꿈 안 하고 부분만 쓴다.</div>
+            <div> <span class="js">JavaScript</span>는 모든 같은 단어?를 한꺼번에 바꾸기 위해 혁신적인 css 존재?</div>
+            <div> <span>id</span>가 제일 우선 그 다음 <span>class</span> 마지막 태그 순서로 강함을 가진다.</div>
+            <div> 반복문 적용과 적용에 필요한 것 : a 태그를 가져오면 될 듯? 하나하나에 지정해서 바뀌도록 만들까?</div>
+        
+        </p>
+
+        <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if(this.value === 'night'){
+            target.style.backgroundColor ='black';
+            target.style.color ='white';
+            this.value = 'day';
+            
+        } else {
+            target.style.backgroundColor ='white';
+            target.style.color ='black';
+            this.value = 'night';
+            
+        }
+    ">
+        <!-- 
+        위는 인덱스 태그이다.
+        document.querySelector('#night_day2') 를 this로 대체함.
+        이렇게 하는 경우 id="night_day2 가 필요가 없어짐."
+
+        <input type="button" value="night" onclick="
+            document.querySelector('body').style.backgroundColor ='black';
+            document.querySelector('body').style.color ='white';
+        ">
+        <input type="button" value="day" onclick="
+            document.querySelector('body').style.backgroundColor ='white';
+            document.querySelector('body').style.color ='black';
+        ">
+
+        <input id="night_day" type="button" value="night" onclick="
+            if(document.querySelector('#night_day').value === 'night'){
+                document.querySelector('body').style.backgroundColor ='black';
+                document.querySelector('body').style.color ='white';
+                document.querySelector('#night_day').value = 'night';
+                this.value = 'day';
+            } else {
+                document.querySelector('body').style.backgroundColor ='white';
+                document.querySelector('body').style.color ='black';
+                document.querySelector('#night_day').value = 'day';
+                this.value = 'night'
+            }
+
+            document.querySelector('body')를 target으로 만들어서 또 단축!
+            var target = document.querySelectort('body');
+        ">
+        -->
+    </body>
+</html>
