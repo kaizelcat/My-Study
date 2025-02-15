@@ -31,6 +31,28 @@
             
         </script>
 
+        <h2>Property & Method</h2>
+        <script>
+            corworkers.showAll = function(){
+                for(var key in this) {
+                    if(key!=="showAll")
+                        document.write(key+ ':' + this[key]+'<br>');
+                }
+            }
+            corworkers.showAll();
+        </script>
 
     </body>
 </html>
+
+<!-- 
+corworkers.showAll = function(){
+                for(var key in corworkers) {
+                    document.write(key+ ':' + corworkers[key]+'<br>');
+                }
+            }
+            corworkers.showAll();
+이거 별로 안 좋음 corworkers가 박혀 있어서. -> this로 대체
+if(key!=="ShowAll") 을 통해서 마지막 showAll까지 나오는 걸 방지
+
+-->
